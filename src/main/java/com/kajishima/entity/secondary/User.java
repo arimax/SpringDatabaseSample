@@ -1,4 +1,4 @@
-package com.kajishima.entity.idm;
+package com.kajishima.entity.secondary;
 
 import java.io.Serializable;
 

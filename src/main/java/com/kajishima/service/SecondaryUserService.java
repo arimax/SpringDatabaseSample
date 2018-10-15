@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kajishima.entity.idm.User;
-import com.kajishima.repository.idm.UserRepository;
+import com.kajishima.entity.secondary.User;
+import com.kajishima.repository.secondary.UserRepository;
 
 @Service
-public class IdmUserService {
+public class SecondaryUserService {
 
 	@Autowired
 	private UserRepository userRepository;

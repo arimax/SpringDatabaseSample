@@ -13,8 +13,8 @@ public class Interceptor extends HandlerInterceptorAdapter{
 
 		String url = request.getRequestURI();
 
-		if (url.contains("/idm/")) {
-			 SchemaContextHolder.setSchemaType("IDM");
+		if (url.contains("/secondary/")) {
+			 SchemaContextHolder.setSchemaType("Secondary");
 		} else {
 			SchemaContextHolder.setSchemaType("FieldManager");
 		}

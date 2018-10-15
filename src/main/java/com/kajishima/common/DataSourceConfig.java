@@ -16,10 +16,10 @@ import org.springframework.web.servlet.handler.MappedInterceptor;
 public class DataSourceConfig {
 
 	@Autowired
-	private FieldManagerConfiguration fieldManagerConfiguration;
+	private PrimaryConfiguration primaryConfiguration;
 
 	@Autowired
-	private IdmConfiguration idmConfiguration;
+	private SecondConfiguration secondConfiguration;
 
 	@Bean
 	@Primary
@@ -27,13 +27,13 @@ public class DataSourceConfig {
 		RoutingDataSourceResolver resolver = new RoutingDataSourceResolver();
 
 		Map<Object, Object> dataSources = new HashMap<Object, Object>();
-		dataSources.put("FieldManager", fieldManagerConfiguration.createDataSource());
-		dataSources.put("IDM", idmConfiguration.createDataSource());
+		dataSources.put("Primary", primaryConfiguration.createDataSource());
+		dataSources.put("Secondary", secondConfiguration.createDataSource());
 
 		resolver.setTargetDataSources(dataSources);
 
 		// default datasource
-		resolver.setDefaultTargetDataSource(fieldManagerConfiguration.createDataSource());
+		resolver.setDefaultTargetDataSource(primaryConfiguration.createDataSource());
 
 		return resolver;
 	}

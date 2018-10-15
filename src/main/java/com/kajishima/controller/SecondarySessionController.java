@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kajishima.entity.idm.Session;
-import com.kajishima.repository.idm.IdmSessionRepository;
+import com.kajishima.entity.secondary.Session;
+import com.kajishima.repository.secondary.SecondarySessionRepository;
 
 @RestController
-public class IdmSessionController {
+public class SecondarySessionController {
 
 	@Autowired
-	private IdmSessionRepository sessionRepository;
+	private SecondarySessionRepository sessionRepository;
 
-	@RequestMapping(value="/idm/session",method=RequestMethod.GET)
+	@RequestMapping(value="/secondary/session",method=RequestMethod.GET)
 	public List<Session> list() {
 
 		return sessionRepository.selectAll();

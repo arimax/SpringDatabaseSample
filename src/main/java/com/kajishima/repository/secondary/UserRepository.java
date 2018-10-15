@@ -1,8 +1,8 @@
-package com.kajishima.repository.idm;
+package com.kajishima.repository.secondary;
 
 import java.util.List;
 
-import com.kajishima.entity.idm.User;
+import com.kajishima.entity.secondary.User;
 
 public interface UserRepository {
 

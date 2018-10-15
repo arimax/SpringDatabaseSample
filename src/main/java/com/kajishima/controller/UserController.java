@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kajishima.entity.idm.User;
-import com.kajishima.service.IdmUserService;
+import com.kajishima.entity.secondary.User;
+import com.kajishima.service.SecondaryUserService;
 
 @RestController
 public class UserController {
 
 	@Autowired
-	private IdmUserService userService;
+	private SecondaryUserService userService;
 
-	@RequestMapping(value="/idm/users",method=RequestMethod.GET)
+	@RequestMapping(value="/secondary/users",method=RequestMethod.GET)
 	public List<User> list() {
 		return userService.list();
 	}

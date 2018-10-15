@@ -11,8 +11,8 @@ import lombok.Data;
 
 @Data
 @Component
-@ConfigurationProperties(prefix="spring.datasource.idm")
-public class IdmConfiguration {
+@ConfigurationProperties(prefix="spring.datasource.primary")
+public class PrimaryConfiguration {
 
 	private String driverClassName;
 	private String url;

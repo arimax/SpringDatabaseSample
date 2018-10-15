@@ -11,8 +11,8 @@ import lombok.Data;
 
 @Data
 @Component
-@ConfigurationProperties(prefix="spring.datasource.fieldmanager")
-public class FieldManagerConfiguration {
+@ConfigurationProperties(prefix="spring.datasource.secondary")
+public class SecondConfiguration {
 
 	private String driverClassName;
 	private String url;

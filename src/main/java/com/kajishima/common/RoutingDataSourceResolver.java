@@ -8,12 +8,12 @@ public class RoutingDataSourceResolver extends AbstractRoutingDataSource {
 	protected Object determineCurrentLookupKey() {
 		// TODO 自動生成されたメソッド・スタブ
 		if (SchemaContextHolder.getSchemaType() == null) {
-			return "FieldManager";
+			return "Primary";
 		}
-		if (SchemaContextHolder.getSchemaType().matches("IDM")) {
-			return "IDM";
+		if (SchemaContextHolder.getSchemaType().matches("Secondary")) {
+			return "Secondary";
 		}
-		return "FieldManager";
+		return "Primary";
 	}
 
 }

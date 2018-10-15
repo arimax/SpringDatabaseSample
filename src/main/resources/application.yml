@@ -1,11 +1,11 @@
 spring:
   datasource:
-    fieldmanager:
+    primary:
       url: jdbc:mysql://localhost:3306/fieldmanager
       username: root
       password:
       driverClassName : com.mysql.jdbc.Driver
-    idm:
+    secondary:
       url: jdbc:mysql://localhost:3306/idm
       username: root
       password:

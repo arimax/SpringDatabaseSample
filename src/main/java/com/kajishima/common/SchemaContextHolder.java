@@ -13,7 +13,7 @@ public class SchemaContextHolder {
 			 return contextHolder.get();
 		 }
 
-		 return "FieldManager";
+		 return "Primary";
 	}
 
 	public static void clear() {

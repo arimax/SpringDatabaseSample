@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kajishima.entity.idm.Session;
-import com.kajishima.repository.idm.IdmSessionRepository;
+import com.kajishima.entity.secondary.Session;
+import com.kajishima.repository.secondary.SecondarySessionRepository;
 
 @Service
-public class IdmSessionService {
+public class SecondarySessionService {
 
 	@Autowired
-	private IdmSessionRepository sessionRepository;
+	private SecondarySessionRepository sessionRepository;
 
 	public List<Session> list() {
 		return sessionRepository.selectAll();
