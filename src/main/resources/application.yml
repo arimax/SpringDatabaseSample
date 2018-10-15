@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    fieldmanager:
+      url: jdbc:mysql://localhost:3306/fieldmanager
+      username: root
+      password:
+      driverClassName : com.mysql.jdbc.Driver
+    idm:
+      url: jdbc:mysql://localhost:3306/idm
+      username: root
+      password:
+      driverClassName : com.mysql.jdbc.Driver
+server:
+  port: 8082
